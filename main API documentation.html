@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:5000/main/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc 0.10.0">
+<title>main API documentation</title>
+<meta name="description" content="">
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin="">
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin="">
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin="">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="" src="./main API documentation_files/highlight.min.js.download" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin=""></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<nav class="http-server-breadcrumbs">
+<a href="http://localhost:5000/">All packages</a>
+</nav>
+<h1 class="title">Module <code>main</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask
+<span class="hljs-keyword">from</span> flask_classful <span class="hljs-keyword">import</span> FlaskView, route
+<span class="hljs-keyword">from</span> flask_restful <span class="hljs-keyword">import</span> Resource, Api, reqparse, request
+<span class="hljs-keyword">import</span> pyodbc
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> datetime
+<span class="hljs-keyword">import</span> ast
+
+app = Flask(__name__)
+api = Api(app)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getConnection</span>():</span>
+    <span class="hljs-string">"""
+    Generate the connection to DB
+
+    Returns:
+
+    pyodbc connection to DB.
+    """</span>
+    server = <span class="hljs-string">'noamperez.database.windows.net'</span>
+    database = <span class="hljs-string">'MarketPlayz'</span>
+    username = <span class="hljs-string">'noamperez'</span>
+    password = <span class="hljs-string">'Nope2607'</span>
+    driver = <span class="hljs-string">'{ODBC Driver 17 for SQL Server}'</span>
+    <span class="hljs-keyword">return</span> pyodbc.connect(
+        <span class="hljs-string">f'DRIVER=<span class="hljs-subst">{driver}</span>;SERVER=tcp:<span class="hljs-subst">{server}</span>;PORT=1433;DATABASE=<span class="hljs-subst">{database}</span>;UID=<span class="hljs-subst">{username}</span>;PWD=<span class="hljs-subst">{password}</span>'</span>)
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Game</span>(<span class="hljs-params">FlaskView</span>):</span>
+    <span class="hljs-string">"""
+    Manages the API functions for Games Table in DB.
+
+    Parameters of game :
+
+    ID - the ID of the game
+
+    Title - the game name
+
+    Platform - Xbox, Sony, PC.
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isGameExist</span>(<span class="hljs-params">self, gameID</span>):</span>
+        <span class="hljs-string">"""
+        Checks if there is a game in the DB with such ID.
+
+        Args:
+
+        `gameID`: The ID of the game.
+
+        Returns:
+
+        True if exists or False otherwise.
+        """</span>
+        data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Games] WHERE ID = <span class="hljs-subst">{gameID}</span>"</span>, getConnection())
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">not</span> data.empty
+
+<span class="hljs-meta">    @route('/', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Games
+
+        Get All games from DB.
+
+        Returns:
+
+        List of games(json)
+        """</span>
+        data = pd.read_sql_query(<span class="hljs-string">"SELECT * FROM [dbo].[Games]"</span>, getConnection())
+        data = data.to_dict()
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+
+<span class="hljs-meta">    @route('/getByID', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getByID</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Games/getByID
+
+        Gets a game by ID.
+
+        Args:
+
+        `ID` (api argument): The ID of the game.
+
+        Returns:
+
+        The game parameters if exists, error message otherwise.
+        """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+            gameID = request.args[<span class="hljs-string">'ID'</span>]
+            <span class="hljs-keyword">try</span>:
+                data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Games] WHERE ID = <span class="hljs-subst">{gameID}</span> "</span>, getConnection())
+                <span class="hljs-keyword">if</span> data.empty:
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no game with this ID."</span>, <span class="hljs-number">404</span>
+                data = data.to_dict()
+                <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{gameID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span>
+
+<span class="hljs-meta">    @route('/', methods=['POST'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Games/
+
+        Adds a game to the DB.
+
+        Args:
+
+        `ID` (api argument): The ID of the game.
+        `Title` (api argument): The Title of the game.
+        `Platform` (api argument): The Platform of the game.
+
+        Returns:
+
+        Approval message if succeeded, error message otherwise.
+        """</span>
+        parser = reqparse.RequestParser()
+        parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Title'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Platform'</span>, required=<span class="hljs-literal">True</span>)
+        args = parser.parse_args()
+
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> self.isGameExist(args[<span class="hljs-string">'ID'</span>]):
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'Game with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' already exists."</span>, <span class="hljs-number">401</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+
+        query = <span class="hljs-string">f"INSERT INTO [dbo].[Games] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{args[<span class="hljs-string">'Title'</span>]}</span>', '<span class="hljs-subst">{args[<span class="hljs-string">'Platform'</span>]}</span>')"</span>
+        connection = getConnection()
+        connection.cursor().execute(query)
+        connection.commit()
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"The Game has been successfully added."</span>, <span class="hljs-number">200</span>
+
+<span class="hljs-meta">    @route('/', methods=['PUT'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">put</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Games/
+
+        Updates a game from the DB.
+
+        Args:
+
+        `ID` (api argument): The ID of the game.
+        `Title` (api argument): The Title of the game.
+        `Platform` (api argument): The Platform of the game.
+
+        Returns:
+
+        Approval message if succeeded, error message otherwise.
+        """</span>
+        parser = reqparse.RequestParser()
+        parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Title'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Platform'</span>, required=<span class="hljs-literal">True</span>)
+        args = parser.parse_args()
+
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isGameExist(args[<span class="hljs-string">'ID'</span>]):
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"Game with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span> is not found."</span>, <span class="hljs-number">404</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+
+        query = <span class="hljs-string">f"UPDATE [dbo].[Games] SET Title = '<span class="hljs-subst">{args[<span class="hljs-string">'Title'</span>]}</span>', Platform = '<span class="hljs-subst">{args[<span class="hljs-string">'Platform'</span>]}</span>' WHERE ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>"</span>
+        connection = getConnection()
+        connection.cursor().execute(query)
+        connection.commit()
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"The Game has been successfully updated."</span>, <span class="hljs-number">200</span>
+
+<span class="hljs-meta">    @route('/', methods=['DELETE'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Games/
+
+        Deletes a game from the DB.
+
+        Args:
+
+        `ID` (api argument): The ID of the game.
+
+        Returns:
+
+        Approval message if succeeded, error message otherwise.
+        """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+            gameID = request.args[<span class="hljs-string">'ID'</span>]
+            <span class="hljs-keyword">try</span>:
+                <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isGameExist(gameID):
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no game with this ID."</span>, <span class="hljs-number">404</span>
+
+                query = <span class="hljs-string">f"DELETE [dbo].[Games] WHERE ID = <span class="hljs-subst">{gameID}</span>"</span>
+                connection = getConnection()
+                connection.cursor().execute(query)
+                connection.commit()
+                <span class="hljs-keyword">return</span> <span class="hljs-string">"The Game has been successfully deleted."</span>, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{gameID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span>(<span class="hljs-params">FlaskView</span>):</span>
+    <span class="hljs-string">"""
+    Manages the API functions for Players Table in DB.
+
+    Parameters of Player :
+
+    ID - the ID of the player
+
+    games - the games the player plays
+
+    Created_date - the date the player was created
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isPlayerExist</span>(<span class="hljs-params">self, playerID</span>):</span>
+        <span class="hljs-string">"""
+        Checks if there is a player in the DB with such ID.
+
+        Args:
+
+        `playerID`: The ID of the player.
+
+        Returns:
+
+        True if exists or False otherwise.
+        """</span>
+        data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Players] WHERE ID = <span class="hljs-subst">{playerID}</span>"</span>, getConnection())
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">not</span> data.empty
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isGamePlayedByPlayer</span>(<span class="hljs-params">self, playerID, gameID</span>):</span>
+        <span class="hljs-string">"""
+        Checks if a game was played by a player.
+
+        Args:
+
+        `playerID`: The ID of the player.
+
+        `gameID`: The ID of the game.
+
+        Returns:
+
+        True if was played or False otherwise.
+        """</span>
+        data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[GamesOfPlayers] WHERE"</span>
+                                 <span class="hljs-string">f" playerID = <span class="hljs-subst">{playerID}</span> and gameID = <span class="hljs-subst">{gameID}</span>"</span>, getConnection())
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">not</span> data.empty
+
+<span class="hljs-meta">    @route('/', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Players/
+
+        Get All players from DB.
+
+        Returns:
+
+        List of players(json)
+        """</span>
+        data = pd.read_sql_query(<span class="hljs-string">"SELECT * FROM [dbo].[Players]"</span>, getConnection())
+        games = []
+        <span class="hljs-keyword">for</span> playerID <span class="hljs-keyword">in</span> data[<span class="hljs-string">"ID"</span>]:
+            games.insert(<span class="hljs-number">0</span>, pd.read_sql_query(<span class="hljs-string">f"SELECT Games.Title FROM Games \nINNER JOIN GamesOfPlayers ON "</span>
+                                              <span class="hljs-string">f"Games.ID=GamesOfPlayers.GameID WHERE PlayerID = <span class="hljs-subst">{playerID}</span>"</span>,
+                                              getConnection()).to_dict())
+
+        data[<span class="hljs-string">"games"</span>] = games
+        data = data.to_dict()
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+
+<span class="hljs-meta">    @route('/getByID', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getByID</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Players/getByID
+
+         Gets a player by ID.
+
+         Args:
+
+         `ID` (api argument): The ID of the player.
+
+         Returns:
+
+         The player parameters if exists, error message otherwise.
+         """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+            playerID = request.args[<span class="hljs-string">'ID'</span>]
+            <span class="hljs-keyword">try</span>:
+                data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Players] WHERE ID = <span class="hljs-subst">{playerID}</span> "</span>, getConnection())
+                <span class="hljs-keyword">if</span> data.empty:
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no player with this ID."</span>, <span class="hljs-number">404</span>
+                data[<span class="hljs-string">"games"</span>] = pd.read_sql_query(<span class="hljs-string">f"SELECT Games.Title FROM Games \nINNER JOIN GamesOfPlayers ON "</span>
+                                                  <span class="hljs-string">f"Games.ID=GamesOfPlayers.GameID WHERE PlayerID = <span class="hljs-subst">{playerID}</span>"</span>,
+                                                  getConnection()).to_dict()
+                data = data.to_dict()
+                <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{playerID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span>
+
+<span class="hljs-meta">    @route('/', methods=['POST'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+          route : /Players/
+
+          Adds a player to the DB.
+
+          Args:
+
+          `ID` (api argument): The ID of the player.
+          `Games` (api argument): The Games of the player.
+
+          Returns:
+
+          Approval message if succeeded, error message otherwise.
+        """</span>
+        parser = reqparse.RequestParser()
+        parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Games'</span>, required=<span class="hljs-literal">False</span>)
+        args = parser.parse_args()
+
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> self.isPlayerExist(args[<span class="hljs-string">'ID'</span>]):
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'Player with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' already exists."</span>, <span class="hljs-number">401</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-comment"># Add player</span>
+        today = datetime.date.today().strftime(<span class="hljs-string">"%Y-%m-%d"</span>)
+        query = <span class="hljs-string">f"INSERT INTO [dbo].[Players] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{today}</span>')"</span>
+        connection = getConnection()
+        connection.cursor().execute(query)
+        connection.commit()
+
+        <span class="hljs-comment"># Add games</span>
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> args[<span class="hljs-string">'Games'</span>]:
+                args[<span class="hljs-string">'Games'</span>] = ast.literal_eval(args[<span class="hljs-string">'Games'</span>])
+                <span class="hljs-keyword">for</span> gameID <span class="hljs-keyword">in</span> args[<span class="hljs-string">'Games'</span>]:
+                    query = <span class="hljs-string">f"INSERT INTO [dbo].[GamesOfPlayers] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{gameID}</span>')"</span>
+                    connection.cursor().execute(query)
+                    connection.commit()
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"The Player has been successfully added."</span>, <span class="hljs-number">200</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"The games are invalid but the player has been successfully added."</span>
+
+<span class="hljs-meta">    @route('/', methods=['PUT'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">put</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+          route : /Players/
+          Updates a player from the DB.
+
+          Args:
+
+          `ID` (api argument): The ID of the player.
+          `Gamed` (api argument): The Title of the player.
+
+          Returns:
+
+          Approval message if succeeded, error message otherwise.
+          """</span>
+        parser = reqparse.RequestParser()
+        parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Games'</span>, required=<span class="hljs-literal">True</span>)
+        args = parser.parse_args()
+
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isPlayerExist(args[<span class="hljs-string">'ID'</span>]):
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"Player with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span> is not found."</span>, <span class="hljs-number">404</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+
+        connection = getConnection()
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> args[<span class="hljs-string">'Games'</span>]:
+                args[<span class="hljs-string">'Games'</span>] = ast.literal_eval(args[<span class="hljs-string">'Games'</span>])
+                <span class="hljs-keyword">for</span> gameID <span class="hljs-keyword">in</span> args[<span class="hljs-string">'Games'</span>]:
+                    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isGamePlayedByPlayer(args[<span class="hljs-string">'ID'</span>], gameID):
+                        query = <span class="hljs-string">f"INSERT INTO [dbo].[GamesOfPlayers] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{gameID}</span>')"</span>
+                        connection.cursor().execute(query)
+                        connection.commit()
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"The Player has been successfully updated."</span>, <span class="hljs-number">200</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"The games are invalid or one of them is already in the list."</span>, <span class="hljs-number">400</span>
+
+<span class="hljs-meta">    @route('/', methods=['DELETE'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Players/
+
+        Deletes a player from the DB.
+
+        Args:
+
+        `ID` (api argument): The ID of the player.
+
+        Returns:
+
+        Approval message if succeeded, error message otherwise.
+        """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+            ID = request.args[<span class="hljs-string">'ID'</span>]
+            <span class="hljs-keyword">try</span>:
+                <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isPlayerExist(ID):
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no player with this ID."</span>, <span class="hljs-number">404</span>
+
+                connection = getConnection()
+                query = <span class="hljs-string">f"DELETE [dbo].[GamesOfPlayers] WHERE PlayerID = <span class="hljs-subst">{ID}</span>"</span>
+                connection.cursor().execute(query)
+                connection.commit()
+
+                query = <span class="hljs-string">f"DELETE [dbo].[Players] WHERE ID = <span class="hljs-subst">{ID}</span>"</span>
+                connection.cursor().execute(query)
+                connection.commit()
+                <span class="hljs-keyword">return</span> <span class="hljs-string">"The Player has been successfully deleted."</span>, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{ID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span>
+
+<span class="hljs-meta">    @route('/getAllGamesOfPlayer', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getAllGamesOfPlayer</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Players/getAllGamesOfPlayer
+
+        Get the games that player has played from the DB.
+
+        Args:
+
+        `ID` (api argument): The ID of the player.
+
+        Returns:
+
+        List of games.
+        """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+            playerID = request.args[<span class="hljs-string">'ID'</span>]
+            <span class="hljs-keyword">try</span>:
+                <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isPlayerExist(playerID):
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no player with this ID."</span>, <span class="hljs-number">404</span>
+                data = pd.read_sql_query(<span class="hljs-string">f"SELECT Games.Title FROM Games \nINNER JOIN GamesOfPlayers ON "</span>
+                                         <span class="hljs-string">f"Games.ID=GamesOfPlayers.GameID WHERE PlayerID = <span class="hljs-subst">{playerID}</span>"</span>,
+                                         getConnection()).to_dict()
+
+                data = data.to_dict()
+                <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{playerID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span>
+
+<span class="hljs-meta">    @route('/getAllPlayersByDate', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getAllPlayersByDate</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Players/getAllPlayersByDate
+
+        Get the players that was created at a specific date from the DB.
+
+        Args:
+
+        `Date` (api argument): The Date the players was created at.
+
+        Returns:
+
+        List of players.
+        """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'Date'</span> <span class="hljs-keyword">in</span> request.args:
+            date = request.args[<span class="hljs-string">'Date'</span>]
+            date = datetime.datetime.strptime(date, <span class="hljs-string">'%Y-%m-%d'</span>)
+            date = date.date()
+            <span class="hljs-keyword">try</span>:
+                query = <span class="hljs-string">f"SELECT * FROM [dbo].[Players]"</span>
+                data = pd.read_sql_query(query, con=getConnection())
+                data = data.loc[data[<span class="hljs-string">"Created_date"</span>] == date]
+                data = data.to_dict()
+                <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{date}</span>' is invalid."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No Date field provided."</span>, <span class="hljs-number">400</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Observer</span>:</span>
+    <span class="hljs-string">"""
+    Observe for events
+    """</span>
+    _observers = []
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+        self._observers.append(self)
+        self._observed_events = []
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">observe</span>(<span class="hljs-params">self, event_name, callback_fn</span>):</span>
+        <span class="hljs-string">"""
+        Add event that was observed to the list of observed events.
+
+        :param event_name:
+        :param callback_fn:
+        """</span>
+        self._observed_events.append({<span class="hljs-string">'event_name'</span>: event_name, <span class="hljs-string">'callback_fn'</span>: callback_fn})
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>:</span>
+    <span class="hljs-string">"""
+    Generic events that we want to observe.
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, event_name, *callback_args</span>):</span>
+        <span class="hljs-keyword">for</span> observer <span class="hljs-keyword">in</span> Observer._observers:
+            <span class="hljs-keyword">for</span> observable <span class="hljs-keyword">in</span> observer._observed_events:
+                <span class="hljs-keyword">if</span> observable[<span class="hljs-string">'event_name'</span>] == event_name:
+                    observable[<span class="hljs-string">'callback_fn'</span>](*callback_args)
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Subscribers</span>(<span class="hljs-params">Observer</span>):</span>
+    <span class="hljs-string">"""
+    Specific event that we want to observe - new subscribers for a gamer.
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+        Observer.__init__(self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">new_subscribe</span>(<span class="hljs-params">self, player, subscriber_nickname</span>):</span>
+        <span class="hljs-string">"""
+        Add to log file that a gamer has new subscriber and send a message
+        :param player:
+        :param subscriber_nickname:
+
+        Returns a message to the gamer.
+        """</span>
+        log_path = <span class="hljs-string">'new_subscribers_log.txt'</span>
+        <span class="hljs-keyword">with</span> open(log_path, <span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> f:
+            f.write(<span class="hljs-string">f"<span class="hljs-subst">{subscriber_nickname}</span> has just subscribed <span class="hljs-subst">{player}</span>. time : <span class="hljs-subst">{datetime.datetime.today()}</span>"</span>)
+        f.close()
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"<span class="hljs-subst">{subscriber_nickname}</span> has just subscribed you."</span>, player
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:
+    Game.register(app, route_base=<span class="hljs-string">'/Games'</span>)
+    Player.register(app, route_base=<span class="hljs-string">'/Players'</span>)
+    subscribers = Subscribers()
+    subscribers.observe(<span class="hljs-string">'new subscriber'</span>, subscribers.new_subscribe)
+    app.run()  <span class="hljs-comment"># run our Flask app</span></code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="main.getConnection"><code class="name flex">
+<span>def <span class="ident">getConnection</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Generate the connection to DB</p>
+<p>Returns:</p>
+<p>pyodbc connection to DB.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getConnection</span>():</span>
+    <span class="hljs-string">"""
+    Generate the connection to DB
+
+    Returns:
+
+    pyodbc connection to DB.
+    """</span>
+    server = <span class="hljs-string">'noamperez.database.windows.net'</span>
+    database = <span class="hljs-string">'MarketPlayz'</span>
+    username = <span class="hljs-string">'noamperez'</span>
+    password = <span class="hljs-string">'Nope2607'</span>
+    driver = <span class="hljs-string">'{ODBC Driver 17 for SQL Server}'</span>
+    <span class="hljs-keyword">return</span> pyodbc.connect(
+        <span class="hljs-string">f'DRIVER=<span class="hljs-subst">{driver}</span>;SERVER=tcp:<span class="hljs-subst">{server}</span>;PORT=1433;DATABASE=<span class="hljs-subst">{database}</span>;UID=<span class="hljs-subst">{username}</span>;PWD=<span class="hljs-subst">{password}</span>'</span>)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="main.Event"><code class="flex name class">
+<span>class <span class="ident">Event</span></span>
+<span>(</span><span>event_name, *callback_args)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Generic events that we want to observe.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span>:</span>
+    <span class="hljs-string">"""
+    Generic events that we want to observe.
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, event_name, *callback_args</span>):</span>
+        <span class="hljs-keyword">for</span> observer <span class="hljs-keyword">in</span> Observer._observers:
+            <span class="hljs-keyword">for</span> observable <span class="hljs-keyword">in</span> observer._observed_events:
+                <span class="hljs-keyword">if</span> observable[<span class="hljs-string">'event_name'</span>] == event_name:
+                    observable[<span class="hljs-string">'callback_fn'</span>](*callback_args)</code></pre>
+</details>
+</dd>
+<dt id="main.Game"><code class="flex name class">
+<span>class <span class="ident">Game</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Manages the API functions for Games Table in DB.</p>
+<p>Parameters of game :</p>
+<p>ID - the ID of the game</p>
+<p>Title - the game name</p>
+<p>Platform - Xbox, Sony, PC.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Game</span>(<span class="hljs-params">FlaskView</span>):</span>
+    <span class="hljs-string">"""
+    Manages the API functions for Games Table in DB.
+
+    Parameters of game :
+
+    ID - the ID of the game
+
+    Title - the game name
+
+    Platform - Xbox, Sony, PC.
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isGameExist</span>(<span class="hljs-params">self, gameID</span>):</span>
+        <span class="hljs-string">"""
+        Checks if there is a game in the DB with such ID.
+
+        Args:
+
+        `gameID`: The ID of the game.
+
+        Returns:
+
+        True if exists or False otherwise.
+        """</span>
+        data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Games] WHERE ID = <span class="hljs-subst">{gameID}</span>"</span>, getConnection())
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">not</span> data.empty
+
+<span class="hljs-meta">    @route('/', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Games
+
+        Get All games from DB.
+
+        Returns:
+
+        List of games(json)
+        """</span>
+        data = pd.read_sql_query(<span class="hljs-string">"SELECT * FROM [dbo].[Games]"</span>, getConnection())
+        data = data.to_dict()
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+
+<span class="hljs-meta">    @route('/getByID', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getByID</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Games/getByID
+
+        Gets a game by ID.
+
+        Args:
+
+        `ID` (api argument): The ID of the game.
+
+        Returns:
+
+        The game parameters if exists, error message otherwise.
+        """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+            gameID = request.args[<span class="hljs-string">'ID'</span>]
+            <span class="hljs-keyword">try</span>:
+                data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Games] WHERE ID = <span class="hljs-subst">{gameID}</span> "</span>, getConnection())
+                <span class="hljs-keyword">if</span> data.empty:
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no game with this ID."</span>, <span class="hljs-number">404</span>
+                data = data.to_dict()
+                <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{gameID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span>
+
+<span class="hljs-meta">    @route('/', methods=['POST'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Games/
+
+        Adds a game to the DB.
+
+        Args:
+
+        `ID` (api argument): The ID of the game.
+        `Title` (api argument): The Title of the game.
+        `Platform` (api argument): The Platform of the game.
+
+        Returns:
+
+        Approval message if succeeded, error message otherwise.
+        """</span>
+        parser = reqparse.RequestParser()
+        parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Title'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Platform'</span>, required=<span class="hljs-literal">True</span>)
+        args = parser.parse_args()
+
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> self.isGameExist(args[<span class="hljs-string">'ID'</span>]):
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'Game with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' already exists."</span>, <span class="hljs-number">401</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+
+        query = <span class="hljs-string">f"INSERT INTO [dbo].[Games] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{args[<span class="hljs-string">'Title'</span>]}</span>', '<span class="hljs-subst">{args[<span class="hljs-string">'Platform'</span>]}</span>')"</span>
+        connection = getConnection()
+        connection.cursor().execute(query)
+        connection.commit()
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"The Game has been successfully added."</span>, <span class="hljs-number">200</span>
+
+<span class="hljs-meta">    @route('/', methods=['PUT'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">put</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Games/
+
+        Updates a game from the DB.
+
+        Args:
+
+        `ID` (api argument): The ID of the game.
+        `Title` (api argument): The Title of the game.
+        `Platform` (api argument): The Platform of the game.
+
+        Returns:
+
+        Approval message if succeeded, error message otherwise.
+        """</span>
+        parser = reqparse.RequestParser()
+        parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Title'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Platform'</span>, required=<span class="hljs-literal">True</span>)
+        args = parser.parse_args()
+
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isGameExist(args[<span class="hljs-string">'ID'</span>]):
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"Game with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span> is not found."</span>, <span class="hljs-number">404</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+
+        query = <span class="hljs-string">f"UPDATE [dbo].[Games] SET Title = '<span class="hljs-subst">{args[<span class="hljs-string">'Title'</span>]}</span>', Platform = '<span class="hljs-subst">{args[<span class="hljs-string">'Platform'</span>]}</span>' WHERE ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>"</span>
+        connection = getConnection()
+        connection.cursor().execute(query)
+        connection.commit()
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"The Game has been successfully updated."</span>, <span class="hljs-number">200</span>
+
+<span class="hljs-meta">    @route('/', methods=['DELETE'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Games/
+
+        Deletes a game from the DB.
+
+        Args:
+
+        `ID` (api argument): The ID of the game.
+
+        Returns:
+
+        Approval message if succeeded, error message otherwise.
+        """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+            gameID = request.args[<span class="hljs-string">'ID'</span>]
+            <span class="hljs-keyword">try</span>:
+                <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isGameExist(gameID):
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no game with this ID."</span>, <span class="hljs-number">404</span>
+
+                query = <span class="hljs-string">f"DELETE [dbo].[Games] WHERE ID = <span class="hljs-subst">{gameID}</span>"</span>
+                connection = getConnection()
+                connection.cursor().execute(query)
+                connection.commit()
+                <span class="hljs-keyword">return</span> <span class="hljs-string">"The Game has been successfully deleted."</span>, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{gameID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span></code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="flask_classful.FlaskView" href="http://localhost:5000/flask_classful.FlaskView.ext">flask_classful.FlaskView</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="main.Game.delete"><code class="name flex">
+<span>def <span class="ident">delete</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Games/</p>
+<p>Deletes a game from the DB.</p>
+<p>Args:</p>
+<p><code>ID</code> (api argument): The ID of the game.</p>
+<p>Returns:</p>
+<p>Approval message if succeeded, error message otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/', methods=['DELETE'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+    route : /Games/
+
+    Deletes a game from the DB.
+
+    Args:
+
+    `ID` (api argument): The ID of the game.
+
+    Returns:
+
+    Approval message if succeeded, error message otherwise.
+    """</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+        gameID = request.args[<span class="hljs-string">'ID'</span>]
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isGameExist(gameID):
+                <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no game with this ID."</span>, <span class="hljs-number">404</span>
+
+            query = <span class="hljs-string">f"DELETE [dbo].[Games] WHERE ID = <span class="hljs-subst">{gameID}</span>"</span>
+            connection = getConnection()
+            connection.cursor().execute(query)
+            connection.commit()
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"The Game has been successfully deleted."</span>, <span class="hljs-number">200</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{gameID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span></code></pre>
+</details>
+</dd>
+<dt id="main.Game.get"><code class="name flex">
+<span>def <span class="ident">get</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Games</p>
+<p>Get All games from DB.</p>
+<p>Returns:</p>
+<p>List of games(json)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/', methods=['GET'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+    route : /Games
+
+    Get All games from DB.
+
+    Returns:
+
+    List of games(json)
+    """</span>
+    data = pd.read_sql_query(<span class="hljs-string">"SELECT * FROM [dbo].[Games]"</span>, getConnection())
+    data = data.to_dict()
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span></code></pre>
+</details>
+</dd>
+<dt id="main.Game.getByID"><code class="name flex">
+<span>def <span class="ident">getByID</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Games/getByID</p>
+<p>Gets a game by ID.</p>
+<p>Args:</p>
+<p><code>ID</code> (api argument): The ID of the game.</p>
+<p>Returns:</p>
+<p>The game parameters if exists, error message otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/getByID', methods=['GET'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getByID</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+    route : /Games/getByID
+
+    Gets a game by ID.
+
+    Args:
+
+    `ID` (api argument): The ID of the game.
+
+    Returns:
+
+    The game parameters if exists, error message otherwise.
+    """</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+        gameID = request.args[<span class="hljs-string">'ID'</span>]
+        <span class="hljs-keyword">try</span>:
+            data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Games] WHERE ID = <span class="hljs-subst">{gameID}</span> "</span>, getConnection())
+            <span class="hljs-keyword">if</span> data.empty:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no game with this ID."</span>, <span class="hljs-number">404</span>
+            data = data.to_dict()
+            <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{gameID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span></code></pre>
+</details>
+</dd>
+<dt id="main.Game.isGameExist"><code class="name flex">
+<span>def <span class="ident">isGameExist</span></span>(<span>self, gameID)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if there is a game in the DB with such ID.</p>
+<p>Args:</p>
+<p><code>gameID</code>: The ID of the game.</p>
+<p>Returns:</p>
+<p>True if exists or False otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isGameExist</span>(<span class="hljs-params">self, gameID</span>):</span>
+    <span class="hljs-string">"""
+    Checks if there is a game in the DB with such ID.
+
+    Args:
+
+    `gameID`: The ID of the game.
+
+    Returns:
+
+    True if exists or False otherwise.
+    """</span>
+    data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Games] WHERE ID = <span class="hljs-subst">{gameID}</span>"</span>, getConnection())
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">not</span> data.empty</code></pre>
+</details>
+</dd>
+<dt id="main.Game.post"><code class="name flex">
+<span>def <span class="ident">post</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Games/</p>
+<p>Adds a game to the DB.</p>
+<p>Args:</p>
+<p><code>ID</code> (api argument): The ID of the game.
+<code>Title</code> (api argument): The Title of the game.
+<code>Platform</code> (api argument): The Platform of the game.</p>
+<p>Returns:</p>
+<p>Approval message if succeeded, error message otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/', methods=['POST'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+    route : /Games/
+
+    Adds a game to the DB.
+
+    Args:
+
+    `ID` (api argument): The ID of the game.
+    `Title` (api argument): The Title of the game.
+    `Platform` (api argument): The Platform of the game.
+
+    Returns:
+
+    Approval message if succeeded, error message otherwise.
+    """</span>
+    parser = reqparse.RequestParser()
+    parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+    parser.add_argument(<span class="hljs-string">'Title'</span>, required=<span class="hljs-literal">True</span>)
+    parser.add_argument(<span class="hljs-string">'Platform'</span>, required=<span class="hljs-literal">True</span>)
+    args = parser.parse_args()
+
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-keyword">if</span> self.isGameExist(args[<span class="hljs-string">'ID'</span>]):
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'Game with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' already exists."</span>, <span class="hljs-number">401</span>
+    <span class="hljs-keyword">except</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+
+    query = <span class="hljs-string">f"INSERT INTO [dbo].[Games] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{args[<span class="hljs-string">'Title'</span>]}</span>', '<span class="hljs-subst">{args[<span class="hljs-string">'Platform'</span>]}</span>')"</span>
+    connection = getConnection()
+    connection.cursor().execute(query)
+    connection.commit()
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"The Game has been successfully added."</span>, <span class="hljs-number">200</span></code></pre>
+</details>
+</dd>
+<dt id="main.Game.put"><code class="name flex">
+<span>def <span class="ident">put</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Games/</p>
+<p>Updates a game from the DB.</p>
+<p>Args:</p>
+<p><code>ID</code> (api argument): The ID of the game.
+<code>Title</code> (api argument): The Title of the game.
+<code>Platform</code> (api argument): The Platform of the game.</p>
+<p>Returns:</p>
+<p>Approval message if succeeded, error message otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/', methods=['PUT'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">put</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+    route : /Games/
+
+    Updates a game from the DB.
+
+    Args:
+
+    `ID` (api argument): The ID of the game.
+    `Title` (api argument): The Title of the game.
+    `Platform` (api argument): The Platform of the game.
+
+    Returns:
+
+    Approval message if succeeded, error message otherwise.
+    """</span>
+    parser = reqparse.RequestParser()
+    parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+    parser.add_argument(<span class="hljs-string">'Title'</span>, required=<span class="hljs-literal">True</span>)
+    parser.add_argument(<span class="hljs-string">'Platform'</span>, required=<span class="hljs-literal">True</span>)
+    args = parser.parse_args()
+
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isGameExist(args[<span class="hljs-string">'ID'</span>]):
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"Game with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span> is not found."</span>, <span class="hljs-number">404</span>
+    <span class="hljs-keyword">except</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+
+    query = <span class="hljs-string">f"UPDATE [dbo].[Games] SET Title = '<span class="hljs-subst">{args[<span class="hljs-string">'Title'</span>]}</span>', Platform = '<span class="hljs-subst">{args[<span class="hljs-string">'Platform'</span>]}</span>' WHERE ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>"</span>
+    connection = getConnection()
+    connection.cursor().execute(query)
+    connection.commit()
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"The Game has been successfully updated."</span>, <span class="hljs-number">200</span></code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="main.Observer"><code class="flex name class">
+<span>class <span class="ident">Observer</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Observe for events</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Observer</span>:</span>
+    <span class="hljs-string">"""
+    Observe for events
+    """</span>
+    _observers = []
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+        self._observers.append(self)
+        self._observed_events = []
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">observe</span>(<span class="hljs-params">self, event_name, callback_fn</span>):</span>
+        <span class="hljs-string">"""
+        Add event that was observed to the list of observed events.
+
+        :param event_name:
+        :param callback_fn:
+        """</span>
+        self._observed_events.append({<span class="hljs-string">'event_name'</span>: event_name, <span class="hljs-string">'callback_fn'</span>: callback_fn})</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="main.Subscribers" href="http://localhost:5000/main.html#main.Subscribers">Subscribers</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="main.Observer.observe"><code class="name flex">
+<span>def <span class="ident">observe</span></span>(<span>self, event_name, callback_fn)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add event that was observed to the list of observed events.</p>
+<p>:param event_name:
+:param callback_fn:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">observe</span>(<span class="hljs-params">self, event_name, callback_fn</span>):</span>
+    <span class="hljs-string">"""
+    Add event that was observed to the list of observed events.
+
+    :param event_name:
+    :param callback_fn:
+    """</span>
+    self._observed_events.append({<span class="hljs-string">'event_name'</span>: event_name, <span class="hljs-string">'callback_fn'</span>: callback_fn})</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="main.Player"><code class="flex name class">
+<span>class <span class="ident">Player</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Manages the API functions for Players Table in DB.</p>
+<p>Parameters of Player :</p>
+<p>ID - the ID of the player</p>
+<p>games - the games the player plays</p>
+<p>Created_date - the date the player was created</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span>(<span class="hljs-params">FlaskView</span>):</span>
+    <span class="hljs-string">"""
+    Manages the API functions for Players Table in DB.
+
+    Parameters of Player :
+
+    ID - the ID of the player
+
+    games - the games the player plays
+
+    Created_date - the date the player was created
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isPlayerExist</span>(<span class="hljs-params">self, playerID</span>):</span>
+        <span class="hljs-string">"""
+        Checks if there is a player in the DB with such ID.
+
+        Args:
+
+        `playerID`: The ID of the player.
+
+        Returns:
+
+        True if exists or False otherwise.
+        """</span>
+        data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Players] WHERE ID = <span class="hljs-subst">{playerID}</span>"</span>, getConnection())
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">not</span> data.empty
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isGamePlayedByPlayer</span>(<span class="hljs-params">self, playerID, gameID</span>):</span>
+        <span class="hljs-string">"""
+        Checks if a game was played by a player.
+
+        Args:
+
+        `playerID`: The ID of the player.
+
+        `gameID`: The ID of the game.
+
+        Returns:
+
+        True if was played or False otherwise.
+        """</span>
+        data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[GamesOfPlayers] WHERE"</span>
+                                 <span class="hljs-string">f" playerID = <span class="hljs-subst">{playerID}</span> and gameID = <span class="hljs-subst">{gameID}</span>"</span>, getConnection())
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">not</span> data.empty
+
+<span class="hljs-meta">    @route('/', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Players/
+
+        Get All players from DB.
+
+        Returns:
+
+        List of players(json)
+        """</span>
+        data = pd.read_sql_query(<span class="hljs-string">"SELECT * FROM [dbo].[Players]"</span>, getConnection())
+        games = []
+        <span class="hljs-keyword">for</span> playerID <span class="hljs-keyword">in</span> data[<span class="hljs-string">"ID"</span>]:
+            games.insert(<span class="hljs-number">0</span>, pd.read_sql_query(<span class="hljs-string">f"SELECT Games.Title FROM Games \nINNER JOIN GamesOfPlayers ON "</span>
+                                              <span class="hljs-string">f"Games.ID=GamesOfPlayers.GameID WHERE PlayerID = <span class="hljs-subst">{playerID}</span>"</span>,
+                                              getConnection()).to_dict())
+
+        data[<span class="hljs-string">"games"</span>] = games
+        data = data.to_dict()
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+
+<span class="hljs-meta">    @route('/getByID', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getByID</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Players/getByID
+
+         Gets a player by ID.
+
+         Args:
+
+         `ID` (api argument): The ID of the player.
+
+         Returns:
+
+         The player parameters if exists, error message otherwise.
+         """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+            playerID = request.args[<span class="hljs-string">'ID'</span>]
+            <span class="hljs-keyword">try</span>:
+                data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Players] WHERE ID = <span class="hljs-subst">{playerID}</span> "</span>, getConnection())
+                <span class="hljs-keyword">if</span> data.empty:
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no player with this ID."</span>, <span class="hljs-number">404</span>
+                data[<span class="hljs-string">"games"</span>] = pd.read_sql_query(<span class="hljs-string">f"SELECT Games.Title FROM Games \nINNER JOIN GamesOfPlayers ON "</span>
+                                                  <span class="hljs-string">f"Games.ID=GamesOfPlayers.GameID WHERE PlayerID = <span class="hljs-subst">{playerID}</span>"</span>,
+                                                  getConnection()).to_dict()
+                data = data.to_dict()
+                <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{playerID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span>
+
+<span class="hljs-meta">    @route('/', methods=['POST'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+          route : /Players/
+
+          Adds a player to the DB.
+
+          Args:
+
+          `ID` (api argument): The ID of the player.
+          `Games` (api argument): The Games of the player.
+
+          Returns:
+
+          Approval message if succeeded, error message otherwise.
+        """</span>
+        parser = reqparse.RequestParser()
+        parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Games'</span>, required=<span class="hljs-literal">False</span>)
+        args = parser.parse_args()
+
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> self.isPlayerExist(args[<span class="hljs-string">'ID'</span>]):
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'Player with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' already exists."</span>, <span class="hljs-number">401</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-comment"># Add player</span>
+        today = datetime.date.today().strftime(<span class="hljs-string">"%Y-%m-%d"</span>)
+        query = <span class="hljs-string">f"INSERT INTO [dbo].[Players] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{today}</span>')"</span>
+        connection = getConnection()
+        connection.cursor().execute(query)
+        connection.commit()
+
+        <span class="hljs-comment"># Add games</span>
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> args[<span class="hljs-string">'Games'</span>]:
+                args[<span class="hljs-string">'Games'</span>] = ast.literal_eval(args[<span class="hljs-string">'Games'</span>])
+                <span class="hljs-keyword">for</span> gameID <span class="hljs-keyword">in</span> args[<span class="hljs-string">'Games'</span>]:
+                    query = <span class="hljs-string">f"INSERT INTO [dbo].[GamesOfPlayers] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{gameID}</span>')"</span>
+                    connection.cursor().execute(query)
+                    connection.commit()
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"The Player has been successfully added."</span>, <span class="hljs-number">200</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"The games are invalid but the player has been successfully added."</span>
+
+<span class="hljs-meta">    @route('/', methods=['PUT'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">put</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+          route : /Players/
+          Updates a player from the DB.
+
+          Args:
+
+          `ID` (api argument): The ID of the player.
+          `Gamed` (api argument): The Title of the player.
+
+          Returns:
+
+          Approval message if succeeded, error message otherwise.
+          """</span>
+        parser = reqparse.RequestParser()
+        parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+        parser.add_argument(<span class="hljs-string">'Games'</span>, required=<span class="hljs-literal">True</span>)
+        args = parser.parse_args()
+
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isPlayerExist(args[<span class="hljs-string">'ID'</span>]):
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"Player with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span> is not found."</span>, <span class="hljs-number">404</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+
+        connection = getConnection()
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> args[<span class="hljs-string">'Games'</span>]:
+                args[<span class="hljs-string">'Games'</span>] = ast.literal_eval(args[<span class="hljs-string">'Games'</span>])
+                <span class="hljs-keyword">for</span> gameID <span class="hljs-keyword">in</span> args[<span class="hljs-string">'Games'</span>]:
+                    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isGamePlayedByPlayer(args[<span class="hljs-string">'ID'</span>], gameID):
+                        query = <span class="hljs-string">f"INSERT INTO [dbo].[GamesOfPlayers] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{gameID}</span>')"</span>
+                        connection.cursor().execute(query)
+                        connection.commit()
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"The Player has been successfully updated."</span>, <span class="hljs-number">200</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"The games are invalid or one of them is already in the list."</span>, <span class="hljs-number">400</span>
+
+<span class="hljs-meta">    @route('/', methods=['DELETE'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Players/
+
+        Deletes a player from the DB.
+
+        Args:
+
+        `ID` (api argument): The ID of the player.
+
+        Returns:
+
+        Approval message if succeeded, error message otherwise.
+        """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+            ID = request.args[<span class="hljs-string">'ID'</span>]
+            <span class="hljs-keyword">try</span>:
+                <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isPlayerExist(ID):
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no player with this ID."</span>, <span class="hljs-number">404</span>
+
+                connection = getConnection()
+                query = <span class="hljs-string">f"DELETE [dbo].[GamesOfPlayers] WHERE PlayerID = <span class="hljs-subst">{ID}</span>"</span>
+                connection.cursor().execute(query)
+                connection.commit()
+
+                query = <span class="hljs-string">f"DELETE [dbo].[Players] WHERE ID = <span class="hljs-subst">{ID}</span>"</span>
+                connection.cursor().execute(query)
+                connection.commit()
+                <span class="hljs-keyword">return</span> <span class="hljs-string">"The Player has been successfully deleted."</span>, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{ID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span>
+
+<span class="hljs-meta">    @route('/getAllGamesOfPlayer', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getAllGamesOfPlayer</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Players/getAllGamesOfPlayer
+
+        Get the games that player has played from the DB.
+
+        Args:
+
+        `ID` (api argument): The ID of the player.
+
+        Returns:
+
+        List of games.
+        """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+            playerID = request.args[<span class="hljs-string">'ID'</span>]
+            <span class="hljs-keyword">try</span>:
+                <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isPlayerExist(playerID):
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no player with this ID."</span>, <span class="hljs-number">404</span>
+                data = pd.read_sql_query(<span class="hljs-string">f"SELECT Games.Title FROM Games \nINNER JOIN GamesOfPlayers ON "</span>
+                                         <span class="hljs-string">f"Games.ID=GamesOfPlayers.GameID WHERE PlayerID = <span class="hljs-subst">{playerID}</span>"</span>,
+                                         getConnection()).to_dict()
+
+                data = data.to_dict()
+                <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{playerID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span>
+
+<span class="hljs-meta">    @route('/getAllPlayersByDate', methods=['GET'])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getAllPlayersByDate</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-string">"""
+        route : /Players/getAllPlayersByDate
+
+        Get the players that was created at a specific date from the DB.
+
+        Args:
+
+        `Date` (api argument): The Date the players was created at.
+
+        Returns:
+
+        List of players.
+        """</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-string">'Date'</span> <span class="hljs-keyword">in</span> request.args:
+            date = request.args[<span class="hljs-string">'Date'</span>]
+            date = datetime.datetime.strptime(date, <span class="hljs-string">'%Y-%m-%d'</span>)
+            date = date.date()
+            <span class="hljs-keyword">try</span>:
+                query = <span class="hljs-string">f"SELECT * FROM [dbo].[Players]"</span>
+                data = pd.read_sql_query(query, con=getConnection())
+                data = data.loc[data[<span class="hljs-string">"Created_date"</span>] == date]
+                data = data.to_dict()
+                <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+            <span class="hljs-keyword">except</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{date}</span>' is invalid."</span>, <span class="hljs-number">400</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No Date field provided."</span>, <span class="hljs-number">400</span></code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="flask_classful.FlaskView" href="http://localhost:5000/flask_classful.FlaskView.ext">flask_classful.FlaskView</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="main.Player.delete"><code class="name flex">
+<span>def <span class="ident">delete</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Players/</p>
+<p>Deletes a player from the DB.</p>
+<p>Args:</p>
+<p><code>ID</code> (api argument): The ID of the player.</p>
+<p>Returns:</p>
+<p>Approval message if succeeded, error message otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/', methods=['DELETE'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+    route : /Players/
+
+    Deletes a player from the DB.
+
+    Args:
+
+    `ID` (api argument): The ID of the player.
+
+    Returns:
+
+    Approval message if succeeded, error message otherwise.
+    """</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+        ID = request.args[<span class="hljs-string">'ID'</span>]
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isPlayerExist(ID):
+                <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no player with this ID."</span>, <span class="hljs-number">404</span>
+
+            connection = getConnection()
+            query = <span class="hljs-string">f"DELETE [dbo].[GamesOfPlayers] WHERE PlayerID = <span class="hljs-subst">{ID}</span>"</span>
+            connection.cursor().execute(query)
+            connection.commit()
+
+            query = <span class="hljs-string">f"DELETE [dbo].[Players] WHERE ID = <span class="hljs-subst">{ID}</span>"</span>
+            connection.cursor().execute(query)
+            connection.commit()
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"The Player has been successfully deleted."</span>, <span class="hljs-number">200</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{ID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span></code></pre>
+</details>
+</dd>
+<dt id="main.Player.get"><code class="name flex">
+<span>def <span class="ident">get</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Players/</p>
+<p>Get All players from DB.</p>
+<p>Returns:</p>
+<p>List of players(json)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/', methods=['GET'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+    route : /Players/
+
+    Get All players from DB.
+
+    Returns:
+
+    List of players(json)
+    """</span>
+    data = pd.read_sql_query(<span class="hljs-string">"SELECT * FROM [dbo].[Players]"</span>, getConnection())
+    games = []
+    <span class="hljs-keyword">for</span> playerID <span class="hljs-keyword">in</span> data[<span class="hljs-string">"ID"</span>]:
+        games.insert(<span class="hljs-number">0</span>, pd.read_sql_query(<span class="hljs-string">f"SELECT Games.Title FROM Games \nINNER JOIN GamesOfPlayers ON "</span>
+                                          <span class="hljs-string">f"Games.ID=GamesOfPlayers.GameID WHERE PlayerID = <span class="hljs-subst">{playerID}</span>"</span>,
+                                          getConnection()).to_dict())
+
+    data[<span class="hljs-string">"games"</span>] = games
+    data = data.to_dict()
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span></code></pre>
+</details>
+</dd>
+<dt id="main.Player.getAllGamesOfPlayer"><code class="name flex">
+<span>def <span class="ident">getAllGamesOfPlayer</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Players/getAllGamesOfPlayer</p>
+<p>Get the games that player has played from the DB.</p>
+<p>Args:</p>
+<p><code>ID</code> (api argument): The ID of the player.</p>
+<p>Returns:</p>
+<p>List of games.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/getAllGamesOfPlayer', methods=['GET'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getAllGamesOfPlayer</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+    route : /Players/getAllGamesOfPlayer
+
+    Get the games that player has played from the DB.
+
+    Args:
+
+    `ID` (api argument): The ID of the player.
+
+    Returns:
+
+    List of games.
+    """</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+        playerID = request.args[<span class="hljs-string">'ID'</span>]
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isPlayerExist(playerID):
+                <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no player with this ID."</span>, <span class="hljs-number">404</span>
+            data = pd.read_sql_query(<span class="hljs-string">f"SELECT Games.Title FROM Games \nINNER JOIN GamesOfPlayers ON "</span>
+                                     <span class="hljs-string">f"Games.ID=GamesOfPlayers.GameID WHERE PlayerID = <span class="hljs-subst">{playerID}</span>"</span>,
+                                     getConnection()).to_dict()
+
+            data = data.to_dict()
+            <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{playerID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span></code></pre>
+</details>
+</dd>
+<dt id="main.Player.getAllPlayersByDate"><code class="name flex">
+<span>def <span class="ident">getAllPlayersByDate</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Players/getAllPlayersByDate</p>
+<p>Get the players that was created at a specific date from the DB.</p>
+<p>Args:</p>
+<p><code>Date</code> (api argument): The Date the players was created at.</p>
+<p>Returns:</p>
+<p>List of players.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/getAllPlayersByDate', methods=['GET'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getAllPlayersByDate</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+    route : /Players/getAllPlayersByDate
+
+    Get the players that was created at a specific date from the DB.
+
+    Args:
+
+    `Date` (api argument): The Date the players was created at.
+
+    Returns:
+
+    List of players.
+    """</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">'Date'</span> <span class="hljs-keyword">in</span> request.args:
+        date = request.args[<span class="hljs-string">'Date'</span>]
+        date = datetime.datetime.strptime(date, <span class="hljs-string">'%Y-%m-%d'</span>)
+        date = date.date()
+        <span class="hljs-keyword">try</span>:
+            query = <span class="hljs-string">f"SELECT * FROM [dbo].[Players]"</span>
+            data = pd.read_sql_query(query, con=getConnection())
+            data = data.loc[data[<span class="hljs-string">"Created_date"</span>] == date]
+            data = data.to_dict()
+            <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{date}</span>' is invalid."</span>, <span class="hljs-number">400</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No Date field provided."</span>, <span class="hljs-number">400</span></code></pre>
+</details>
+</dd>
+<dt id="main.Player.getByID"><code class="name flex">
+<span>def <span class="ident">getByID</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Players/getByID</p>
+<p>Gets a player by ID.</p>
+<p>Args:</p>
+<p><code>ID</code> (api argument): The ID of the player.</p>
+<p>Returns:</p>
+<p>The player parameters if exists, error message otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/getByID', methods=['GET'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getByID</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+    route : /Players/getByID
+
+     Gets a player by ID.
+
+     Args:
+
+     `ID` (api argument): The ID of the player.
+
+     Returns:
+
+     The player parameters if exists, error message otherwise.
+     """</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">'ID'</span> <span class="hljs-keyword">in</span> request.args:
+        playerID = request.args[<span class="hljs-string">'ID'</span>]
+        <span class="hljs-keyword">try</span>:
+            data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Players] WHERE ID = <span class="hljs-subst">{playerID}</span> "</span>, getConnection())
+            <span class="hljs-keyword">if</span> data.empty:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">"There is no player with this ID."</span>, <span class="hljs-number">404</span>
+            data[<span class="hljs-string">"games"</span>] = pd.read_sql_query(<span class="hljs-string">f"SELECT Games.Title FROM Games \nINNER JOIN GamesOfPlayers ON "</span>
+                                              <span class="hljs-string">f"Games.ID=GamesOfPlayers.GameID WHERE PlayerID = <span class="hljs-subst">{playerID}</span>"</span>,
+                                              getConnection()).to_dict()
+            data = data.to_dict()
+            <span class="hljs-keyword">return</span> {<span class="hljs-string">'data'</span>: data}, <span class="hljs-number">200</span>
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{playerID}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Error: No ID field provided."</span>, <span class="hljs-number">400</span></code></pre>
+</details>
+</dd>
+<dt id="main.Player.isGamePlayedByPlayer"><code class="name flex">
+<span>def <span class="ident">isGamePlayedByPlayer</span></span>(<span>self, playerID, gameID)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if a game was played by a player.</p>
+<p>Args:</p>
+<p><code>playerID</code>: The ID of the player.</p>
+<p><code>gameID</code>: The ID of the game.</p>
+<p>Returns:</p>
+<p>True if was played or False otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isGamePlayedByPlayer</span>(<span class="hljs-params">self, playerID, gameID</span>):</span>
+    <span class="hljs-string">"""
+    Checks if a game was played by a player.
+
+    Args:
+
+    `playerID`: The ID of the player.
+
+    `gameID`: The ID of the game.
+
+    Returns:
+
+    True if was played or False otherwise.
+    """</span>
+    data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[GamesOfPlayers] WHERE"</span>
+                             <span class="hljs-string">f" playerID = <span class="hljs-subst">{playerID}</span> and gameID = <span class="hljs-subst">{gameID}</span>"</span>, getConnection())
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">not</span> data.empty</code></pre>
+</details>
+</dd>
+<dt id="main.Player.isPlayerExist"><code class="name flex">
+<span>def <span class="ident">isPlayerExist</span></span>(<span>self, playerID)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if there is a player in the DB with such ID.</p>
+<p>Args:</p>
+<p><code>playerID</code>: The ID of the player.</p>
+<p>Returns:</p>
+<p>True if exists or False otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isPlayerExist</span>(<span class="hljs-params">self, playerID</span>):</span>
+    <span class="hljs-string">"""
+    Checks if there is a player in the DB with such ID.
+
+    Args:
+
+    `playerID`: The ID of the player.
+
+    Returns:
+
+    True if exists or False otherwise.
+    """</span>
+    data = pd.read_sql_query(<span class="hljs-string">f"SELECT * FROM [dbo].[Players] WHERE ID = <span class="hljs-subst">{playerID}</span>"</span>, getConnection())
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">not</span> data.empty</code></pre>
+</details>
+</dd>
+<dt id="main.Player.post"><code class="name flex">
+<span>def <span class="ident">post</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Players/</p>
+<p>Adds a player to the DB.</p>
+<p>Args:</p>
+<p><code>ID</code> (api argument): The ID of the player.
+<code>Games</code> (api argument): The Games of the player.</p>
+<p>Returns:</p>
+<p>Approval message if succeeded, error message otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/', methods=['POST'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+      route : /Players/
+
+      Adds a player to the DB.
+
+      Args:
+
+      `ID` (api argument): The ID of the player.
+      `Games` (api argument): The Games of the player.
+
+      Returns:
+
+      Approval message if succeeded, error message otherwise.
+    """</span>
+    parser = reqparse.RequestParser()
+    parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+    parser.add_argument(<span class="hljs-string">'Games'</span>, required=<span class="hljs-literal">False</span>)
+    args = parser.parse_args()
+
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-keyword">if</span> self.isPlayerExist(args[<span class="hljs-string">'ID'</span>]):
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"'Player with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' already exists."</span>, <span class="hljs-number">401</span>
+    <span class="hljs-keyword">except</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+    <span class="hljs-comment"># Add player</span>
+    today = datetime.date.today().strftime(<span class="hljs-string">"%Y-%m-%d"</span>)
+    query = <span class="hljs-string">f"INSERT INTO [dbo].[Players] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{today}</span>')"</span>
+    connection = getConnection()
+    connection.cursor().execute(query)
+    connection.commit()
+
+    <span class="hljs-comment"># Add games</span>
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-keyword">if</span> args[<span class="hljs-string">'Games'</span>]:
+            args[<span class="hljs-string">'Games'</span>] = ast.literal_eval(args[<span class="hljs-string">'Games'</span>])
+            <span class="hljs-keyword">for</span> gameID <span class="hljs-keyword">in</span> args[<span class="hljs-string">'Games'</span>]:
+                query = <span class="hljs-string">f"INSERT INTO [dbo].[GamesOfPlayers] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{gameID}</span>')"</span>
+                connection.cursor().execute(query)
+                connection.commit()
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"The Player has been successfully added."</span>, <span class="hljs-number">200</span>
+    <span class="hljs-keyword">except</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"The games are invalid but the player has been successfully added."</span></code></pre>
+</details>
+</dd>
+<dt id="main.Player.put"><code class="name flex">
+<span>def <span class="ident">put</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>route : /Players/
+Updates a player from the DB.</p>
+<p>Args:</p>
+<p><code>ID</code> (api argument): The ID of the player.
+<code>Gamed</code> (api argument): The Title of the player.</p>
+<p>Returns:</p>
+<p>Approval message if succeeded, error message otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-meta">@route('/', methods=['PUT'])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">put</span>(<span class="hljs-params">self</span>):</span>
+    <span class="hljs-string">"""
+      route : /Players/
+      Updates a player from the DB.
+
+      Args:
+
+      `ID` (api argument): The ID of the player.
+      `Gamed` (api argument): The Title of the player.
+
+      Returns:
+
+      Approval message if succeeded, error message otherwise.
+      """</span>
+    parser = reqparse.RequestParser()
+    parser.add_argument(<span class="hljs-string">'ID'</span>, required=<span class="hljs-literal">True</span>)
+    parser.add_argument(<span class="hljs-string">'Games'</span>, required=<span class="hljs-literal">True</span>)
+    args = parser.parse_args()
+
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isPlayerExist(args[<span class="hljs-string">'ID'</span>]):
+            <span class="hljs-keyword">return</span> <span class="hljs-string">f"Player with ID = <span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span> is not found."</span>, <span class="hljs-number">404</span>
+    <span class="hljs-keyword">except</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"'<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>' is invalid ID."</span>, <span class="hljs-number">400</span>
+
+    connection = getConnection()
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-keyword">if</span> args[<span class="hljs-string">'Games'</span>]:
+            args[<span class="hljs-string">'Games'</span>] = ast.literal_eval(args[<span class="hljs-string">'Games'</span>])
+            <span class="hljs-keyword">for</span> gameID <span class="hljs-keyword">in</span> args[<span class="hljs-string">'Games'</span>]:
+                <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.isGamePlayedByPlayer(args[<span class="hljs-string">'ID'</span>], gameID):
+                    query = <span class="hljs-string">f"INSERT INTO [dbo].[GamesOfPlayers] VALUES(<span class="hljs-subst">{args[<span class="hljs-string">'ID'</span>]}</span>, '<span class="hljs-subst">{gameID}</span>')"</span>
+                    connection.cursor().execute(query)
+                    connection.commit()
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"The Player has been successfully updated."</span>, <span class="hljs-number">200</span>
+    <span class="hljs-keyword">except</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"The games are invalid or one of them is already in the list."</span>, <span class="hljs-number">400</span></code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="main.Subscribers"><code class="flex name class">
+<span>class <span class="ident">Subscribers</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Specific event that we want to observe - new subscribers for a gamer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Subscribers</span>(<span class="hljs-params">Observer</span>):</span>
+    <span class="hljs-string">"""
+    Specific event that we want to observe - new subscribers for a gamer.
+    """</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+        Observer.__init__(self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">new_subscribe</span>(<span class="hljs-params">self, player, subscriber_nickname</span>):</span>
+        <span class="hljs-string">"""
+        Add to log file that a gamer has new subscriber and send a message
+        :param player:
+        :param subscriber_nickname:
+
+        Returns a message to the gamer.
+        """</span>
+        log_path = <span class="hljs-string">'new_subscribers_log.txt'</span>
+        <span class="hljs-keyword">with</span> open(log_path, <span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> f:
+            f.write(<span class="hljs-string">f"<span class="hljs-subst">{subscriber_nickname}</span> has just subscribed <span class="hljs-subst">{player}</span>. time : <span class="hljs-subst">{datetime.datetime.today()}</span>"</span>)
+        f.close()
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"<span class="hljs-subst">{subscriber_nickname}</span> has just subscribed you."</span>, player</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="main.Observer" href="http://localhost:5000/main.html#main.Observer">Observer</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="main.Subscribers.new_subscribe"><code class="name flex">
+<span>def <span class="ident">new_subscribe</span></span>(<span>self, player, subscriber_nickname)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add to log file that a gamer has new subscriber and send a message
+:param player:
+:param subscriber_nickname:</p>
+<p>Returns a message to the gamer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">new_subscribe</span>(<span class="hljs-params">self, player, subscriber_nickname</span>):</span>
+    <span class="hljs-string">"""
+    Add to log file that a gamer has new subscriber and send a message
+    :param player:
+    :param subscriber_nickname:
+
+    Returns a message to the gamer.
+    """</span>
+    log_path = <span class="hljs-string">'new_subscribers_log.txt'</span>
+    <span class="hljs-keyword">with</span> open(log_path, <span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> f:
+        f.write(<span class="hljs-string">f"<span class="hljs-subst">{subscriber_nickname}</span> has just subscribed <span class="hljs-subst">{player}</span>. time : <span class="hljs-subst">{datetime.datetime.today()}</span>"</span>)
+    f.close()
+    <span class="hljs-keyword">return</span> <span class="hljs-string">f"<span class="hljs-subst">{subscriber_nickname}</span> has just subscribed you."</span>, player</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="main.Observer" href="http://localhost:5000/main.html#main.Observer">Observer</a></b></code>:
+<ul class="hlist">
+<li><code><a title="main.Observer.observe" href="http://localhost:5000/main.html#main.Observer.observe">observe</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="http://localhost:5000/main/#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="main.getConnection" href="http://localhost:5000/main.html#main.getConnection">getConnection</a></code></li>
+</ul>
+</li>
+<li><h3><a href="http://localhost:5000/main/#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="main.Event" href="http://localhost:5000/main.html#main.Event">Event</a></code></h4>
+</li>
+<li>
+<h4><code><a title="main.Game" href="http://localhost:5000/main.html#main.Game">Game</a></code></h4>
+<ul class="two-column">
+<li><code><a title="main.Game.delete" href="http://localhost:5000/main.html#main.Game.delete">delete</a></code></li>
+<li><code><a title="main.Game.get" href="http://localhost:5000/main.html#main.Game.get">get</a></code></li>
+<li><code><a title="main.Game.getByID" href="http://localhost:5000/main.html#main.Game.getByID">getByID</a></code></li>
+<li><code><a title="main.Game.isGameExist" href="http://localhost:5000/main.html#main.Game.isGameExist">isGameExist</a></code></li>
+<li><code><a title="main.Game.post" href="http://localhost:5000/main.html#main.Game.post">post</a></code></li>
+<li><code><a title="main.Game.put" href="http://localhost:5000/main.html#main.Game.put">put</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="main.Observer" href="http://localhost:5000/main.html#main.Observer">Observer</a></code></h4>
+<ul class="">
+<li><code><a title="main.Observer.observe" href="http://localhost:5000/main.html#main.Observer.observe">observe</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="main.Player" href="http://localhost:5000/main.html#main.Player">Player</a></code></h4>
+<ul class="">
+<li><code><a title="main.Player.delete" href="http://localhost:5000/main.html#main.Player.delete">delete</a></code></li>
+<li><code><a title="main.Player.get" href="http://localhost:5000/main.html#main.Player.get">get</a></code></li>
+<li><code><a title="main.Player.getAllGamesOfPlayer" href="http://localhost:5000/main.html#main.Player.getAllGamesOfPlayer">getAllGamesOfPlayer</a></code></li>
+<li><code><a title="main.Player.getAllPlayersByDate" href="http://localhost:5000/main.html#main.Player.getAllPlayersByDate">getAllPlayersByDate</a></code></li>
+<li><code><a title="main.Player.getByID" href="http://localhost:5000/main.html#main.Player.getByID">getByID</a></code></li>
+<li><code><a title="main.Player.isGamePlayedByPlayer" href="http://localhost:5000/main.html#main.Player.isGamePlayedByPlayer">isGamePlayedByPlayer</a></code></li>
+<li><code><a title="main.Player.isPlayerExist" href="http://localhost:5000/main.html#main.Player.isPlayerExist">isPlayerExist</a></code></li>
+<li><code><a title="main.Player.post" href="http://localhost:5000/main.html#main.Player.post">post</a></code></li>
+<li><code><a title="main.Player.put" href="http://localhost:5000/main.html#main.Player.put">put</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="main.Subscribers" href="http://localhost:5000/main.html#main.Subscribers">Subscribers</a></code></h4>
+<ul class="">
+<li><code><a title="main.Subscribers.new_subscribe" href="http://localhost:5000/main.html#main.Subscribers.new_subscribe">new_subscribe</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+<script>
+setInterval(() =>
+fetch(window.location.href, {
+method: "HEAD",
+cache: "no-store",
+headers: {"If-None-Match": "1635410500.2051103"},
+}).then(response => response.ok && window.location.reload()), 700);
+</script>
+
+</body></html>
